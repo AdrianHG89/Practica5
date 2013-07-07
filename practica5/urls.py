@@ -1,8 +1,8 @@
 from django.conf.urls import patterns, include, url
 
 # Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+from django.contrib import admin
+admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
@@ -14,4 +14,9 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
+	url(r'^home', 'practica5.views.home', name='home'),
+    url(r'^about', 'practica5.views.about', name='about'),
+    url(r'^help', 'practica5.views.help', name='help'),
+    url(r'^contact', 'practica5.views.contact', name='contact'),
+	url(r'^admin/', include(admin.site.urls)),
 )
